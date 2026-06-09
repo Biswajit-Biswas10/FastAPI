@@ -1,0 +1,618 @@
+/* 
+body {
+  background: #fafafa;
+  color: #33333a;
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #9f4646;
+}
+
+.main-color {
+  background-color: #4d82e4 ;
+}
+
+.strike-through-td {
+    text-decoration: line-through;
+} */
+
+/* h1 {
+  color: red;
+} */
+
+/* Login & Register Pages */
+/* 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #4d82e4, #4d82e4);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+.card-header h2 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body .form-group {
+    margin-bottom: 20px;
+}
+
+.card-body label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9aa2b1;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.card-body .form-control {
+    border-radius: 8px;
+    padding: 10px 14px;
+    border: 1.5px solid #ddd;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.card-body .form-control:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(152, 175, 204, 0.1);
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #c87958, #95a9c7);
+    border: none;
+    margin-top: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.login-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(146, 232, 120, 0.3);
+}
+
+.card-footer {
+    text-align: center;
+    padding: 16px 30px 24px;
+    border-top: 1px solid #eee;
+}
+
+.card-footer p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.card-footer a {
+    color: #5b93e1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+ */
+
+
+/* --------------------------------------- */
+
+
+/* --- Variables --- */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #dbeafe;
+    --accent: #0ea5e9;
+    --success: #059669;
+    --danger: #dc2626;
+    --warning: #f59e0b;
+    --text-dark: #1e293b;
+    --text-mid: #475569;
+    --text-light: #94a3b8;
+    --bg-body: #f1f5f9;
+    --bg-white: #ffffff;
+    --border: #e2e8f0;
+    --border-focus: #2563eb;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+}
+ 
+/* --- Global Reset --- */
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    background: var(--bg-body);
+    color: var(--text-dark);
+    padding-top: 72px;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Navbar
+   ═══════════════════════════════════════════════ */
+ 
+.main-color {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.25);
+    padding: 12px 24px;
+}
+ 
+.navbar-brand {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.3px;
+}
+ 
+.nav-link {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    padding: 6px 14px !important;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+}
+ 
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+ 
+.btn-outline-light {
+    border-radius: var(--radius-sm) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 6px 18px !important;
+    transition: all 0.2s !important;
+}
+ 
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-1px);
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Auth Pages (Login & Register)
+   ═══════════════════════════════════════════════ */
+ 
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 24px;
+}
+ 
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+}
+ 
+.auth-card.wide {
+    max-width: 560px;
+}
+ 
+.auth-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 32px 30px 28px;
+    text-align: center;
+}
+ 
+.auth-header h2 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+ 
+.auth-header p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+ 
+.auth-body {
+    padding: 30px;
+}
+ 
+.auth-footer {
+    text-align: center;
+    padding: 16px 30px 24px;
+    border-top: 1px solid var(--border);
+}
+ 
+.auth-footer p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-light);
+}
+ 
+.auth-footer a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+ 
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Form Elements
+   ═══════════════════════════════════════════════ */
+ 
+.form-group {
+    margin-bottom: 18px;
+}
+ 
+.form-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+ 
+.form-control {
+    border-radius: var(--radius-sm) !important;
+    padding: 10px 14px !important;
+    border: 1.5px solid var(--border) !important;
+    font-size: 14px !important;
+    color: var(--text-dark) !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+    background: var(--bg-white) !important;
+}
+ 
+.form-control:focus {
+    border-color: var(--border-focus) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+    outline: none !important;
+}
+ 
+.form-control::placeholder {
+    color: var(--text-light);
+}
+ 
+select.form-control {
+    cursor: pointer;
+}
+ 
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+ 
+.form-check-input {
+    margin-top: 6px;
+}
+ 
+.form-check-label {
+    font-weight: 500;
+    color: var(--text-mid);
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Buttons
+   ═══════════════════════════════════════════════ */
+ 
+.btn {
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    transition: all 0.2s !important;
+    border: none !important;
+}
+ 
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+ 
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35) !important;
+}
+ 
+.btn-success {
+    background: var(--success) !important;
+    color: #fff !important;
+}
+ 
+.btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3) !important;
+}
+ 
+.btn-danger {
+    background: var(--danger) !important;
+    color: #fff !important;
+}
+ 
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3) !important;
+}
+ 
+.btn-block {
+    width: 100%;
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Todo Cards (Add / Edit pages)
+   ═══════════════════════════════════════════════ */
+ 
+.todo-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+ 
+.todo-card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+}
+ 
+.todo-card-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 22px 28px;
+    font-size: 18px;
+    font-weight: 700;
+}
+ 
+.todo-card-body {
+    padding: 28px;
+}
+ 
+.todo-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+ 
+.todo-card-actions .btn {
+    flex: 1;
+    text-align: center;
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Todo List Page
+   ═══════════════════════════════════════════════ */
+ 
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 4px;
+}
+ 
+.todo-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+ 
+.todo-table {
+    width: 100%;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border-collapse: collapse;
+}
+ 
+.todo-table thead th {
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+ 
+.todo-table tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-mid);
+    vertical-align: middle;
+}
+ 
+.todo-table tbody tr:last-child td {
+    border-bottom: none;
+}
+ 
+.todo-table tbody tr:hover {
+    background: var(--primary-light);
+}
+ 
+.todo-table tbody tr {
+    transition: background 0.15s;
+}
+ 
+.strike-through-td {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+ 
+/* Priority badges */
+.priority-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+ 
+.priority-1 { background: #dcfce7; color: #166534; }
+.priority-2 { background: #dbeafe; color: #1e40af; }
+.priority-3 { background: #fef3c7; color: #92400e; }
+.priority-4 { background: #fed7aa; color: #9a3412; }
+.priority-5 { background: #fecaca; color: #991b1b; }
+ 
+/* Status dot */
+.status-complete {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--success);
+}
+ 
+.status-pending {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--warning);
+}
+ 
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+ 
+.status-complete .status-dot { background: var(--success); }
+.status-pending .status-dot { background: var(--warning); }
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Empty State
+   ═══════════════════════════════════════════════ */
+ 
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+ 
+.empty-state h4 {
+    color: var(--text-mid);
+    margin-bottom: 8px;
+}
+ 
+.empty-state p {
+    font-size: 14px;
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Animations
+   ═══════════════════════════════════════════════ */
+ 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+ 
+/* ═══════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════ */
+ 
+@media (max-width: 576px) {
+    .auth-card, .todo-card {
+        margin: 0 8px;
+    }
+ 
+    .auth-body, .todo-card-body {
+        padding: 22px 18px;
+    }
+ 
+    .todo-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+ 
+    .form-row {
+        flex-direction: column;
+    }
+ 
+    .todo-card-actions {
+        flex-direction: column;
+    }
+}
