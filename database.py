@@ -16,8 +16,15 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
 
 
+SQLALCHEMY_DATABASE_URL = "postgresql://neondb_owner:npg_lfDqR7oBdr9s@ep-empty-shape-aqdb8xiv-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL
+)
+
+
 # SQLite URL from database.py (Lesson 153)
-SQLALCHEMY_DATABASE_URL = "sqlite:///./todosapp.db" 
+# SQLALCHEMY_DATABASE_URL = "sqlite:///./todosapp.db" 
 # SQLALCHEMY_DATABASE_URL = "postgresql://postgres:test1234@localhost/TodoApplicationDatabase" # This one is for PostgreSQL
 
 # SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:Biswa.Sharmi25#@127.0.0.1:3306/TodoApplicationDatabase"  # This is for MySQL
@@ -26,11 +33,14 @@ SQLALCHEMY_DATABASE_URL = "sqlite:///./todosapp.db"
 # check_same_thread=False is required because FastAPI serves requests across multiple threads.
 # Remove connect_args entirely when switching to PostgreSQL.
 
+
+"""
 # This is for SQLite only
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
     connect_args={"check_same_thread": False},
 )
+"""
 
 
 # engine = create_engine(SQLALCHEMY_DATABASE_URL)
