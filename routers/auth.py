@@ -27,6 +27,8 @@ from jose import jwt, JWTError
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.exc import IntegrityError
 
+from monitoring import AUTH_EVENTS
+
 
 router = APIRouter(
     prefix='/auth',
@@ -140,6 +142,27 @@ async def create_user(db: db_dependency,
     db.commit()
 
 
+# For monitoring
+@router.post("/", status_code=status.HTTP_201_CREATED)
+async def create_user(db: db_dependency, create_user_request: CreateUserRequest):
+    # ... existing code ...
+    db.add(create_user_model)
+    db.commit()
+    AUTH_EVENTS.labels(event="registration").inc()
+
+
+
+@router.post("/token", response_model=Token)
+async def login_for_access_token(form_data, db: db_dependency):
+    user = authenticate_user(form_data.username, form_data.password, db)
+    if not user:
+        AUTH_EVENTS.labels(event="login_failed").inc()
+        raise HTTPException(status_code=401, detail='Could not validate user.')
+
+    token = create_access_token(user.username, user.id, user.role, timedelta(minutes=20))
+    AUTH_EVENTS.labels(event="login_success").inc()
+
+    return {'access_token': token, 'token_type': 'bearer'}
 
 # Delete a user using user_ID, Additionally I have added this code. 
 @router.delete("/{user_id}", status_code=status.HTTP_204_NO_CONTENT)
