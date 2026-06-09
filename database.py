@@ -16,11 +16,14 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
 
 
+
+# Prod Database
 SQLALCHEMY_DATABASE_URL = "postgresql://neondb_owner:npg_lfDqR7oBdr9s@ep-empty-shape-aqdb8xiv-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
 )
+
 
 
 # SQLite URL from database.py (Lesson 153)
@@ -41,6 +44,7 @@ engine = create_engine(
     connect_args={"check_same_thread": False},
 )
 """
+
 
 
 # engine = create_engine(SQLALCHEMY_DATABASE_URL)
