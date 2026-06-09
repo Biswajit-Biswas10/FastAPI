@@ -32,11 +32,17 @@ def test(request: Request):
     # return templates.TemplateResponse("home.html", {"request": request})
     return RedirectResponse(url="/todos/todo-page", status_code=status.HTTP_302_FOUND)
 
+"""
 # 164 Added this function
 @app.get("/healthy")
 def health_check():
     return {'status': 'Healthy'}
+"""
 
+# Implement check for uptimerobot
+@app.api_route("/healthy", methods=["GET", "HEAD"])
+def health_check():
+    return {'status': 'Healthy'}
 
 # Register route modules — each router handles its own group of endpoints
 app.include_router(auth.router)
